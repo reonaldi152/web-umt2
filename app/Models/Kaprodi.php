@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Foundation\Auth\User as Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
 class Kaprodi extends Model
 {
@@ -15,4 +16,11 @@ class Kaprodi extends Model
         'password',
         'NIDN',
     ];
+
+    public function setPasswordAttribute($value)
+    {
+        if (!empty($value)) {
+            $this->attributes['password'] = Hash::make($value);
+        }
+    }
 }
