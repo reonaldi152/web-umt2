@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ApprovalRequestApprovedNotification;
+use App\Mail\ApprovalRequestRejectedNotification;
+use App\Mail\ApprovalRequestSignedNotification;
+use App\Mail\NewApprovalRequestNotification;
 use App\Models\ApprovalRequest;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class ApprovalRequestController extends Controller
@@ -42,7 +47,7 @@ class ApprovalRequestController extends Controller
         ]);
 
         // Send notification to Kaprodi
-        // Mail::to('reonaldi1105@gmail.com')->send(new NewApprovalRequestNotification($approvalRequest));
+        Mail::to('reonaldi1105@gmail.com')->send(new NewApprovalRequestNotification($approvalRequest));
 
         return redirect('mahasiswa/status')->with('success', 'File uploaded successfully!');
     }
@@ -62,7 +67,7 @@ class ApprovalRequestController extends Controller
         $approvalRequest->update(['status' => 'approved']);
 
         // Send notification to student
-        // Mail::to($approvalRequest->user->email)->send(new ApprovalRequestApprovedNotification($approvalRequest));
+        Mail::to($approvalRequest->user->email)->send(new ApprovalRequestApprovedNotification($approvalRequest));
 
         return back()->with('success', 'Request approved successfully!');
     }
@@ -74,7 +79,7 @@ class ApprovalRequestController extends Controller
         $approvalRequest->update(['status' => 'rejected']);
 
         // Send notification to student
-        // Mail::to($approvalRequest->user->email)->send(new ApprovalRequestRejectedNotification($approvalRequest));
+        Mail::to($approvalRequest->user->email)->send(new ApprovalRequestRejectedNotification($approvalRequest));
 
         return back()->with('success', 'Request rejected successfully!');
     }
@@ -99,7 +104,7 @@ class ApprovalRequestController extends Controller
         $approvalRequest->update(['signed_document_path' => $signedDocumentPath]);
 
         // Send notification to student
-        // Mail::to($approvalRequest->user->email)->send(new ApprovalRequestSignedNotification($approvalRequest));
+        Mail::to($approvalRequest->user->email)->send(new ApprovalRequestSignedNotification($approvalRequest));
 
         return back()->with('success', 'Signed document uploaded successfully!');
     }
