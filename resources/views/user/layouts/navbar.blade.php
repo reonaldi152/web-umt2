@@ -64,6 +64,29 @@
                     <a class="nav-link" href="{{ url('lainnya') }}">Lainnya</a>
                 </li>
             </ul>
+            <div class="navbar-nav ml-auto">
+                @guest
+                    <a href="{{ route('login') }}" class="btn btn-md login btn-outline-primary">Login</a>
+                @endguest
+                @auth
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            @auth
+                                {{ Auth::user()->name }}
+                            @endauth
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="{{ '/logout' }}">Logout</a>
+                            </li>
+                            {{-- <li>
+                                <hr class="dropdown-divider">
+                            </li> --}}
+                        </ul>
+                    </li>
+                @endauth
+            </div>
         </div>
     </div>
 </nav>
