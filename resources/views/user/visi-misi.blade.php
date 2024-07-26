@@ -4,6 +4,11 @@
 
 @section('content')
 
+    <!-- Section Header -->
+    <section id="header-section">
+        <h1>Visi Misi</h1>
+    </section>
+
     <!-- Section Visi Misi -->
     <section id="visi-misi" class="mt-5">
         <div class="container">

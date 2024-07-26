@@ -4,6 +4,11 @@
 
 @section('content')
 
+    <!-- Section Header -->
+    <section id="header-section">
+        <h1>Approval Kaprodi</h1>
+    </section>
+
     <!-- Section Aproval Kaprodi -->
     <section id="aproval-kaprodi" class="mt-5 mb-5">
         <div class="container">

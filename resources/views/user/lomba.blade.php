@@ -4,6 +4,11 @@
 
 @section('content')
 
+    <!-- Section Header -->
+    <section id="header-section">
+        <h1>Lomba</h1>
+    </section>
+
     {{-- Section Lomba --}}
     <section id="lomba">
         <div class="container mt-5">

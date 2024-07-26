@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\ApprovalRequestController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DosenController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\LombaController;
+use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\JurnalController;
 use App\Http\Controllers\KaprodiController;
-use App\Http\Controllers\LombaController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApprovalRequestController;
 
 
 
@@ -49,6 +50,8 @@ Route::get('/jurnal', [JurnalController::class, 'index']);
 Route::get('/dosen', [DosenController::class, 'index']);
 Route::view('/visi-misi', 'user.visi-misi');
 Route::get('/aproval', [ApprovalRequestController::class, 'showUploadForm']);
+Route::get('/alumni', [AlumniController::class, 'index']);
+
 
 
 
