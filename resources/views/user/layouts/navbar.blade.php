@@ -35,7 +35,7 @@
                         <li><a class="dropdown-item" href="{{ url('visi-misi') }}">Visi dan Misi</a></li>
                         <li><a class="dropdown-item" href="{{ url('dosen') }}">Dosen</a></li>
                         <li><a class="dropdown-item" href="{{ url('sinta') }}">Akreditasi</a></li>
-                        <li><a class="dropdown-item" href="{{ url('sinta') }}">SO</a></li>
+                        <li><a class="dropdown-item" href="{{ url('so') }}">SO</a></li>
                         <li><a class="dropdown-item" href="{{ url('alumni') }}">Alumni</a></li>
                     </ul>
                 </li>

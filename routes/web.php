@@ -49,6 +49,7 @@ Route::get('/lomba', [LombaController::class, 'index']);
 Route::get('/jurnal', [JurnalController::class, 'index']);
 Route::get('/dosen', [DosenController::class, 'index']);
 Route::view('/visi-misi', 'user.visi-misi');
+Route::view('/so', 'user.so');
 Route::get('/aproval', [ApprovalRequestController::class, 'showUploadForm']);
 Route::get('/alumni', [AlumniController::class, 'index']);
 

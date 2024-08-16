@@ -5,22 +5,28 @@
 @section('content')
 
     <!-- Section Header -->
-    <section id="header-section">
-        <h1>Visi Misi</h1>
+    <section id="header-section" style="margin-bottom: 0; padding: 60px 0;">
+        <h1 class="text-center text-white">Visi Misi</h1>
     </section>
 
     <!-- Section Visi Misi -->
-    <section id="visi-misi" class="mt-5">
+    <section id="visi-misi" style="background-color: #FFEB3B; padding: 40px 0; margin-top: 0;">
         <div class="container">
             <div class="text-center mb-4">
                 <h3 class="fs-3 fw-bolder">Visi dan Misi</h3>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <h4 class="fw-bold">Visi</h4>
+                <div class="col-md-5">
+                    <h4 class="fw-bold">
+                        <i class="bi bi-eye"></i> Visi
+                    </h4>
                     <p>"Menjadi program studi Teknik informatika yang berintegritas, profesional, dan Islami dalam
                         pengembangan bidang teknologi informasi"</p>
-                    <h4 class="fw-bold">Misi</h4>
+                </div>
+                <div class="col-md-5">
+                    <h4 class="fw-bold">
+                        <i class="bi bi-list-check"></i> Misi
+                    </h4>
                     <ol>
                         <li>Menyelenggarakan dan mengembangkan pendidikan yang islami dan Profesional di bidang rekayasa
                             perangkat lunak dan jaringan komputer.</li>
@@ -28,13 +34,16 @@
                             komputer yang kompetitif dan memiliki daya saing ditingkat global.</li>
                         <li>Menjalin kerja sama dengan lembaga atau institusi lain dalam upaya meningkatkan mutu program dan
                             kegiatan akademik baik yang bersifat lokal, nasional dan internasional.</li>
-                        <li>Merumuskan sumber daya manusia yang berintegritas, profesional, kompeten dan kompetitif di
+                        <li>Merumuskan sumber daya manusia yang berintegritas, profesional, kompeten, dan kompetitif di
                             bidang rekayasa perangkat lunak dan jaringan komputer.</li>
                     </ol>
                 </div>
             </div>
         </div>
     </section>
+
+
+
 
     <!-- Section Keunggulan -->
     <section id="keunggulan" class="mt-5">
